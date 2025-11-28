@@ -1,8 +1,8 @@
 import { useState,useEffect } from 'react';
 import Taskform from './components/Taskform'
 import Tasklist from './components/Tasklist'
-import PrograssTracker from './components/PrograssTracker';
 import './style.css'
+import PrograssTracker from './components/Prograsstracker';
 
 
 
@@ -35,15 +35,14 @@ export default function App() {
   return (
     <div>
       <header>
-        <h1>TaskMan</h1>
+        <h1>TaskBuddy</h1>
         <p><i>Your friendly Task Manager</i></p>
       </header>
       <Taskform addTask = {addTask}/>
       <Tasklist tasks = {tasks}
        updateTask = {updateTask} 
        deleteTask = {deleteTask}/>
-      <PrograssTracker tasks={tasks}/>
-
+      <PrograssTracker tasks={tasks} /> 
       {tasks.length > 0 && (<button className='clear-btn'
         onClick={clearTasks}>clear All Tasks</button>)}
       
